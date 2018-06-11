@@ -144,6 +144,8 @@ nav h1 a {
   margin: 15px;
   min-height: 380px;
   padding: 10px;
+	/*max-width: 350px;*/
+	display:inline-block;
   /*text-align: left;
   width: 270px;*/
 }
@@ -272,4 +274,27 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/*@media screen and (min-width: 834px) {
+	ul {
+    margin: 0 auto;
+    text-align: center;
+	}
+
+	li {
+    vertical-align: top;
+	}
+}
+*/
+/*@media screen and (min-width:450px) and (max-width: 833px) {
+	li {
+		width: 100%;
+	}
+}*/
+
+@media screen and (min-width: 834px) {
+	li {
+		max-width: 350px;
+	}
 }
