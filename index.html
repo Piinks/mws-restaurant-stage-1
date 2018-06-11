@@ -20,7 +20,7 @@
 
     <!-- Map Section -->
     <section id="map-container" role="application" aria-labelledby="aria-map-label">
-      <label id="aria-map-label"> Map Application provided by Google </label>
+      <label id="aria-map-label" class="aria-label"> Map Application provided by Google </label>
       <div id="map"> </div>
     </section>
 
@@ -29,13 +29,13 @@
       <div class="filter-options">
         <h2> Filter Results </h2>
 
+        <label id="aria-select-neighborhood" class="aria-label"> Select filter by neighborhood </label>
         <select id="neighborhoods-select" aria-labelledby="aria-select-neighborhood" name="neighborhoods" onchange="updateRestaurants()">
-          <label id="aria-select-neighborhood"> Select filter by neighborhood </label>
           <option value="all"> All Neighborhoods </option>
         </select>
 
+        <label id="aria-select-cuisine" class="aria-label"> Select filter by cuisine </label>
         <select id="cuisines-select" aria-labelledby="aria-select-cuisine" name="cuisines" onchange="updateRestaurants()">
-          <label id="aria-select-cuisine"> Select filter by cuisine </label>
           <option value="all"> All Cuisines </option>
         </select>
 
