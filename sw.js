@@ -1,4 +1,6 @@
 // Service Worker
+
+// Data
 var myCache = "restauarantReview_51";
 var cacheFiles = [
   '/index.html',
@@ -9,7 +11,7 @@ var cacheFiles = [
   '/js/dbhelper.js',
   '/js/main.js',
   '/js/restaurant_info.js',
-  '/js/swregister.js'
+  '/js/swregister.js' 
 ];
 
 // Event Listener for install - caching the files

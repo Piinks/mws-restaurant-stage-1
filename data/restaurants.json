@@ -1,5 +1,5 @@
 {
-  "restaurants": [{
+  "restaurants": [{ 
     "id": 1,
     "name": "Mission Chinese Food",
     "neighborhood": "Manhattan",
