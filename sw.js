@@ -1,7 +1,7 @@
 // Service Worker
 
 // Data
-var myCache = "restauarantReview_51";
+var myCache = "restauarantReview_100";
 var cacheFiles = [
   '/index.html',
   '/restaurant.html',
