@@ -57,7 +57,11 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = `/img/${restaurant.id}@1x.jpg`;
+  image.srcset = `/img/${restaurant.id}@1x.jpg 300w,
+                  /img/${restaurant.id}@2x.jpg 600w,
+                  /img/${restaurant.id}@3x.jpg 900w`;
+  image.alt = restaurant.alt_text;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -78,7 +82,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   for (let key in operatingHours) {
     const row = document.createElement('tr');
 
-    const day = document.createElement('td');
+    const day = document.createElement('th');
     day.innerHTML = key;
     row.appendChild(day);
 
@@ -118,6 +122,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
+  name.id = "reviewer-name";
   name.innerHTML = review.name;
   li.appendChild(name);
 
@@ -129,7 +134,20 @@ createReviewHTML = (review) => {
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
+  const stars = document.createElement('p');
+  var starString = "";
+  for (i = 0; i < review.rating; i++){
+    starString += "&#9733 ";
+  }
+  //console.log("starString ", starString);
+  stars.innerHTML = starString;
+  li.appendChild(stars);
+
+  const line = document.createElement('hr');
+  li.appendChild(line);
+
   const comments = document.createElement('p');
+  comments.id = "reviewer-comments";
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
@@ -142,7 +160,9 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
+  //const h2 = document.createElement('h2');
   li.innerHTML = restaurant.name;
+  //li.appendChild(h2);
   breadcrumb.appendChild(li);
 }
 
