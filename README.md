@@ -1,3 +1,6 @@
+Stage One of Udacity's Mobile Web Specialist Capstone Project. See new repo MobileWebSpecialistND for future progress.
+
+
 # Mobile Web Specialist Certification Course
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
